@@ -7,17 +7,13 @@ class FizzBuzz {
 
         int i = 1;
         while (i < 100) {
-
-            // Find out which numbers divide i.
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
-
-            // Print our appropriate result.
-            i = doFizzBuzz(divisibleBy3, divisibleBy5, i);
+            i = doFizzBuzz(i);
         }
     }
 
-    private static int doFizzBuzz(boolean divisibleBy3, boolean divisibleBy5, int i) {
+    public static int doFizzBuzz(int i) {
+        boolean divisibleBy3 = i % 3 == 0;
+        boolean divisibleBy5 = i % 5 == 0;
         if (divisibleBy3 && divisibleBy5) {
 
             System.out.println("Fizz Buzz");
